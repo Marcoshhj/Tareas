@@ -1,1 +1,16 @@
-
+package c01;
+import java.util.Scanner;
+public class Hello {
+	static  String hola() {
+	
+		Scanner scan = new 	Scanner (System.in);
+		System.out.println("escribi tu medida: ");
+		return scan.nextLine();
+	}
+	public static void main(String[] args) {
+		String hola = "te amo pepa";
+		System.out.println("hola mundo " + hola + " " +hola());
+		
+	}
+	
+}
