@@ -25,6 +25,10 @@ public class ejer1 {
 				return 0;
 			}
 		}
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+public static int sumatoriapart(int n) {
+		return n%2 == 0? n + sumatoriapart(n-2): sumatoriapart(n-2);
+	}
 	
 		
 	
