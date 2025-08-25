@@ -14,3 +14,24 @@ public class ejer1 {
 
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
+public class ejer1 {
+	public static int sumatoriapar(int n) {
+		if (n ==0) {
+			return 0;
+		}
+		if (n %2==0){
+			return n + sumatoriapar(n-1);
+		}else {
+				return 0;
+			}
+		}
+	
+		
+	
+
+	public static void main(String[] args) {
+		System.out.println(sumatoriapar(4));
+
+	}
+
+}
