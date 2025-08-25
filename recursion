@@ -35,3 +35,47 @@ public class ejer1 {
 	}
 
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+public class Potencia {
+	
+	
+	public static double potencia(double x, int n) {
+		if (n ==0) {
+			return 1;
+	}
+		return x* potencia(x,n-1);
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("primer numero: ");
+		int a= sc.nextInt();
+		System.out.println("segundo numero: ");
+		double b=sc.nextDouble();
+		System.out.println(potencia(b,a));
+}
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+public class ejer1 {
+	public static int sumatoriapar(int n) {
+		if (n ==0) {
+			return 0;
+		}
+		if (n %2==0){
+			return n + sumatoriapar(n-1);
+		}else {
+				return sumatoriapar(n-1);
+			}
+		}
+	
+		
+	
+
+	public static void main(String[] args) {
+		System.out.println(sumatoriapar(4));
+
+	}
+
+}
