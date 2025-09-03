@@ -96,3 +96,6 @@ public boolean antesQue(Fecha otra) {
 		
 }
 }
+public int diasdediferenciacion(fecha otra) {
+		return Math.abs(cantdias(this)-cantdias(otra));
+		
