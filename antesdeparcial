@@ -1,1 +1,109 @@
+irep de cartas:
+clase carta:
+int palo, toma valores de 0 a 3 (4 valores) , el int numero que varia entre 1 y 12, ambas siendo enteros
+**el juego lo define la regla de negocio**
 
+
+public class Agenda {
+	Persona[] contactos;
+	String[] telefonos;
+	
+	
+	//IREP
+	//NUMERO DE TELEFONO DE LA PERSONA ES SU MISMA POSICION QUE LA PERSONA
+	//EL ARREGLO CONTACTOS DEBE TENER AMBAS LA MISMA CANTIDAD
+	
+	public Agenda(int tamanio) {
+		this.contactos= new Persona[tamanio];
+		this.telefonos = new String[tamanio];
+	}
+	public void guardar(Persona contacto, String telefono) {
+		for (int i = 0; i < contactos.length; i++) {
+			if(this.contactos[i]== null) {
+				this.contactos[i]= contacto;
+				this.telefonos[i]= telefono;
+				return;
+			}
+		}
+		Persona [] nuevoContactos = new Persona [this.contactos.length + 10];
+		String [] nuevoTelefonos = new String(this.contactos.length + 10);
+		
+		for (int i = 0; i < this.contactos.length; i++) {
+			nuevoContactos[i] = this.contactos[i];
+			nuevoTelefonos[i] = this.telefonos[i];
+		}
+		nuevoContactos[this.contactos.length] = contacto;
+		nuevoTelefonos[this.telefonos.length] = telefono;
+		this.contactos = nuevoContactos;
+		this.telefonos = nuevoTelefonos;
+
+
+
+
+
+public class Carta {
+private int palo;
+private int numero;
+	//IREP
+	// 0 <= this.palo <=3
+	//
+	
+	public Carta(int palo, int numero) {
+	this numeros=
+	this palo=
+}
+}
+
+
+public class Juego {
+
+	public static void main(String[] args) {
+		Carta[] cartas= new Carta[40];
+		System.out.printl(cartas[0]);
+		cartas[0]= new cartas (10,3);
+		Mazo mazo1 = new Mazo();
+		
+		Mazo mazo2=new Mazo();
+		mazo2.cartas = mazo1.cartas;
+
+	}
+
+}
+
+
+
+
+import java.util.Iterator;
+public class Mazo {
+	private Carta [] cartas;
+	//IREP
+	//this.cartas.lenght ==40
+	//no hay cartas cpn numeros 8 y 9
+	public Mazo() {
+		this.cartas = new Cartas[40];
+		int j = 0; 
+		for (int p = 0; p <= 3; p++) { 
+			for(int i = 1; i <= 7; i++) { 
+				cartas[j] = new Carta(p, i); 
+				j++; } 
+			for (int i = 10; i <=12; i++) { 
+				cartas[j] = new Carta(p, i); 
+				j++; } }
+	}
+	public Mazo copiar () {
+		Mazo mazo = new Mazo();
+			Carta carta = new Carta(10,0);
+			cartas[0].numero
+	}
+}
+
+
+public class Persona {
+	String nombre;
+	int edad;
+	int dni;
+	public Persona(String nombre, int edad) {
+		this.nombre = nombre;
+		this.edad = edad;
+		this.dni= dni;
+	}
