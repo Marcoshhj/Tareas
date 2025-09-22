@@ -1,0 +1,46 @@
+public class Comision {
+	String materia; 
+	int numero; 
+	Docente[] docentes; 
+	Estudiante[] inscriptos; 
+	int[] calificaciones;
+	
+	private boolean estaDocente(Docente d) {
+		for(Docente doc: this.docentes) {
+			if(doc.equals(d)) {
+				return true;
+			}
+	}
+		return false;
+	}
+	private boolean estaEstudiante(Estudiante e) {
+		for(Estudiante est:this.inscriptos) {
+			if(est.equals(e)) {
+				return true;
+	}
+}
+	
+}
+public class Ungs {
+	Comision[] comisiones;
+	Integer[]numeros;
+	
+	boolean cursaCon(Estudiante e, Docente d) {
+		for (Comision com   : this.comisiones) {
+			if(com.estaDocente(d)&& com.estaEstudiante(e)) {
+				return true;
+		}
+			
+	}
+	return false;
+	
+}
+
+	boolean suficientesDocentes() {	
+	for(Comision com:this.comisiones) {
+		if(com.inscriptos.length/20.0 +1 < com.docentes.length ) {
+			return false;
+		}
+	}
+	return true;
+}
