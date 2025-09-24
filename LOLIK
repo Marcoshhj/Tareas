@@ -33,3 +33,57 @@ private int cantidadAprobadas(Estudiante masEst) {
 
 
 
+
+
+
+
+
+AVION^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+
+
+
+public int  laMejorNota() {
+	int mejorNota=0;
+	for(Integer cal:this.calificaciones) {
+		if(cal >mejorNota) {
+			mejorNota=cal;
+			
+		}
+	}
+	return mejorNota;
+}
+
+
+
+
+public void alumnosConMejorNota() {
+	int cantAlum=0;
+	for(int i=0; i<this.inscriptos.length; i++) {
+		if(this.calificaciones)[i]==MejorNota){
+			cantAlum++;
+		}
+	}
+	return cantAlum;
+
+
+
+
+public int losMejores() {
+	double mejorNota;
+	int cantAlum=0;
+	
+	for(comision c: this.comisiones) {
+		//calcula la mejor nota
+		
+		//cuento los alumnos que obtuvieron la mejor nota
+		cantAlumn+=c.alumnosconMejorNota(c.lamejornota());
+				
+			}
+		
+		return cantAlum;
+	}
+}
