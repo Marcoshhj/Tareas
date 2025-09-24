@@ -37,15 +37,6 @@ private int cantidadAprobadas(Estudiante masEst) {
 
 
 
-
-AVION^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-
-
-
-
-
 public int  laMejorNota() {
 	int mejorNota=0;
 	for(Integer cal:this.calificaciones) {
@@ -87,3 +78,8 @@ public int losMejores() {
 		return cantAlum;
 	}
 }
+
+
+
+
+AVION^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
