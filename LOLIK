@@ -1,1 +1,35 @@
 Este 17 nos tomaron sobre definición, clasificación y características de metáfora según Aristóteles y luego de un texto analizar dos metáforas teniendo en cuenta esas operaciones discursivas de Aristóteles.
+
+
+
+Estudiante elMasEstudioso() {
+			estudiante masEst=comisiones[0].inscriptos[0];
+			int cantmat=cantidadAprobadas(masEst);
+			for(comision co:this.comisiones) {
+				for(Estudiante e:co.inscriptos) {
+					if(cantidadAprobadas(e)>cantmat)}
+				masEEst=ee;
+				cantMat=cantidadAprobadas(e);
+				
+				}
+			}
+		return masEst;
+		}
+
+
+private int cantidadAprobadas(Estudiante masEst) {
+	int cant=0;
+	for(Comision cc:this.comisiones) {
+		for(int i=0; i<cc.inscriptos.lenght;i++) {
+			if(cc.inscriptos[i].equals(masEst))&&
+			cc.calificaciones[i]>=4){
+				cant++;
+			}
+		}
+	}
+	return cant;
+}
+
+
+
+
