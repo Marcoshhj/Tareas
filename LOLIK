@@ -83,3 +83,108 @@ public int losMejores() {
 
 
 AVION^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+public class Aerolinea {
+	Vuelo[] vuelos;
+	int vuelosEn(Tripulante t, String tipoAvion) {
+		int cant=0;
+		for(Vuelo v:this.vuelos) {
+			if(v.avion.tipo.equals(tipoAvion) &&
+					v.estaTripulante(t)) {
+				cant ++;
+				
+			}
+		}
+		
+		
+		return cant;
+	}
+	int antiguedadPromedio(String tipoAvion) {
+		int cant=0;
+		int sumaAnti=0;
+		for (Vuelo v:this.vuelos) {
+			if(v.avion.tipo.equals(tipoAvion)) {
+				sumaAnti +=v.sumAntiguedad();
+				cant++;
+			}
+		}
+		
+		return sumaAnti/cant;
+	}
+	Vuelo elMasInspeccionado() {
+		Vuelo masInsp=this.vuelos[0];
+		int cantMaxInsp=this.vuelos[0].cantDe("inspector");
+		for(Vuelo v:this.vuelos) {
+			if (v.cantDe()>cantMaxInsp) {
+				masInsp=v;
+				cantMaxInsp=v.cantDe();
+			}
+			
+		}
+		return masInsp;
+	}
+	int cantidadMaximaInsp() {
+		int maxInsp=0;
+		for(vuelo v: this.vuelos) {
+			if(v.cantInsp()>maxInsp) {
+				maxInsp=v.cantInsp();
+			}
+		}
+		return maxInsp;
+	}
+	boolean hayVueloSobrecargado() {
+		for(Vuelo v : this.vuelos) {
+			if (estaSobrecargado() ){
+				return true;
+			}
+			
+		}
+		
+	}
+	Tripulante pilotoDelMes() {
+		tripulante pilotoMes=this.vuelos[0].tripulacion;
+		int vuelosConPilotosMes=cant;
+		for(Vuelo v: this.vuelos) {
+			if(cantidadVuelosPilotos() > vuelosConPilotoMes){
+				pilotoMes=v;
+				cantMaxInsp=v.cantDe("inspector");
+			}
+
+
+
+public class Vuelo {
+	Avion avion; 
+	Tripulante[] tripulacion;
+	public boolean estaTripulante(Tripulante t) {
+		for(Tripulante tr:this.tripulacion) {
+			if(tr.equals(t)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	public int sumAntiguedad() {
+		int cant=0;
+		for(Tripulante tr:this.tripulacion) {
+			cant +=tr.antiguedad;
+			
+		}
+	}
+	public int cantDe(String cargo) {
+		int cantInsp= 0;
+		for(tripulante t: this.tripulacion) {
+			if(t.cargo.equals(cargo)) {
+				cantInsp++;
+			}
+		}
+		
+	}
+	public boolean estaSobrecargado() {
+		return cantDe("Aeromozo")>
+		this.avion.capacidad*0.1;
+		
+	}
+}
+
