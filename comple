@@ -16,3 +16,22 @@ public class Complejidad {
 		      }
 		   }
 		}
+
+
+
+public static void cambiarNumeros(int[] a) {
+   for(int i = 0; i<a.length; i++) {
+      int max = a[0];
+      for (int j = 0; j < a.length; j++) {
+         if (a[j] > max) {
+            max = a[j];
+         }
+      }
+      if (a[i] > max/2) {
+         a[i]= max/2;
+      }
+   }
+
+
+
+(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
